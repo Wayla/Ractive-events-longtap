@@ -32,10 +32,15 @@ var Hammer = require('hammerjs')
 
   var longtap = function ( node, fire ) {
 
-
+    Hammer(node).on("hold", function(event) {
+      fire({
+        node: node,
+        original: event //actually a hammerjs event -- to get at the original event use gesture.srcEvent
+      })
+    });
 
     return {
-      teardown: function () {}
+      teardown: function () {} //probably need to define this at some point
     };
   };
 
