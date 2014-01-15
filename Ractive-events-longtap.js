@@ -1,35 +1,38 @@
 //code copied and modified from https://github.com/RactiveJS/Ractive-events-tap/blob/18aec5fae805f3e160f19408b7866fd459b6cd0c/Ractive-events-tap.js
 
+var Hammer = require('hammerjs')
+
 (function ( global, factory ) {
 
   'use strict';
 
   // Common JS (i.e. browserify) environment
   if ( typeof module !== 'undefined' && module.exports && typeof require === 'function' ) {
-    factory( require( 'Ractive' ) );
+    factory( require( 'Ractive' ), require( 'hammerjs' ) );
   }
 
   // AMD?
   else if ( typeof define === 'function' && define.amd ) {
-    define([ 'Ractive' ], factory );
+    define([ 'Ractive', 'hammerjs' ], factory );
   }
 
   // browser global
-  else if ( global.Ractive ) {
-    factory( global.Ractive );
+  else if ( global.Ractive && global.Hammer) {
+    factory( global.Ractive, global.Hammer );
   }
 
   else {
     throw new Error( 'Could not find Ractive! It must be loaded before the long-tap plugin' );
   }
 
-}( typeof window !== 'undefined' ? window : this, function ( Ractive ) {
+
+}( typeof window !== 'undefined' ? window : this, function ( Ractive, Hammer ) {
 
   'use strict';
 
   var longtap = function ( node, fire ) {
 
-  
+
 
     return {
       teardown: function () {}
