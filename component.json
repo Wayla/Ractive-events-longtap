@@ -1,0 +1,17 @@
+{
+        "name": "ractive-events-longtap",
+        "repo": "Wayla/Ractive-events-longtap",
+        "description": "Ractive-events-longtap",
+        "version": "0.1.1",
+        "keywords": [],
+        "dependencies": {
+                "RactiveJS/Ractive": "0.3.9",
+                "EightMedia/hammer.js": "*"
+        },
+        "development": {},
+        "license": "MIT",
+        "main": "Ractive-events-longtap.js",
+        "scripts": [
+                "Ractive-events-longtap.js"
+        ]
+}
