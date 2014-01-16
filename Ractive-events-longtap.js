@@ -1,7 +1,5 @@
 //code copied and modified from https://github.com/RactiveJS/Ractive-events-tap/blob/18aec5fae805f3e160f19408b7866fd459b6cd0c/Ractive-events-tap.js
 
-var Hammer = require('hammerjs')
-
 (function ( global, factory ) {
 
   'use strict';
@@ -47,4 +45,3 @@ var Hammer = require('hammerjs')
   Ractive.events.longtap = longtap;
 
 }));
-
