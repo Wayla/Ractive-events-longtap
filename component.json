@@ -2,7 +2,7 @@
         "name": "ractive-events-longtap",
         "repo": "Wayla/Ractive-events-longtap",
         "description": "Ractive-events-longtap",
-        "version": "0.1.1",
+        "version": "0.1.2",
         "keywords": [],
         "dependencies": {
             "EightMedia/hammer.js": "*",
